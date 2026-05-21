@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discography | Kaladrius</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+</head>
+<body>
+    <div id="scroll-progress"></div>
+    <a href="index.html" class="return-arrow"><i class="fas fa-arrow-left"></i></a>
+
+    <div class="page-wrapper">
+        <section class="content-section" style="max-width: 900px;">
+            <h1 style="margin-bottom: 2rem;"><i class="fas fa-record-vinyl"></i> Discography</h1>
+            
+            <div class="controls animate-on-scroll">
+                <button id="sort-bpm" class="btn btn-purple" style="padding: 10px 20px; font-size: 0.9rem;">Sort by BPM</button>
+                <button id="sort-key" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Sort by Key</button>
+            </div>
+
+            <div id="track-container" class="track-list">
+                <!-- Tracks are injected here by script.js -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Telperion Music. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
