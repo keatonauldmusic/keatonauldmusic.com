@@ -226,7 +226,7 @@
   /* Music Page Modular Grid */
   .music-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
@@ -382,6 +382,10 @@
     background-color: #fff;
     transition: width 0.3s;
   }
+
+  .new-song{
+    box-shadow: 0 0 10px var(--brand-red);
+  }
   
   .email-link:hover::after {
     width: 100%;
@@ -500,6 +504,7 @@
     .hero, .song-detail, .contact-split {
       flex-direction: column;
       text-align: center;
+      margin-top: 20%;
     }
   
     .hero-content {
