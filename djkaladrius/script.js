@@ -22,8 +22,9 @@ document.querySelectorAll('.animate-on-scroll').forEach((el) => {
 
 // Discography Database
 const tracks = [
-    { id: 1, title: "Dancing in Hell", genre: "Electro-House", bpm: 120, key: "3B", art: "covers/dancinginhell.jpg", lyrics: "The angels are dancing in hell tonight\nSo let yourself run free\nNo one you have to be\nIt's just you and me\nThe angels are dancing in hell tonight\nJust enjoy that freedom\nDon't know where it leads us...\n\nThe sky won't even put up a fight\nBecause the angels are dancing in hell tonight\nNo the sky won't even put up a fight\nBecause the angels are dancing in hell tonight\nDancing in hell tonight\nDancing in hell tonight\n\n[Bass Drop]\n\nThe angels are dancing in hell tonight\nSo let yourself run free\nNo one you have to be\nIt's just you and me\nThe angels are dancing in hell tonight\nJust enjoy that freedom\nDon't know where it leads us...\n\nFreedom\nDon't know where it\nFreedom\nDon't know where it\nFreedom\nDon't know where it\nBecause the angels are dancing in hell tonight\n\n[Bass Drop]\n\nDancing in hell, dancing in hell, dancing in hell tonight\nDancing in hell, dancing in hell, dancing in hell tonight\nDancing in hell, dancing in hell, dancing in hell tonight\nDancing in hell, dancing in hell, dancing in hell tonight\n\n[Bass Drop]\n\nBecause the angels are dancing in hell tonight\nDancing in hell tonight", spotify: "https://open.spotify.com/track/4H93zNQNCBmlEVPsbwRnkT?si=3ccd2c91528a4c2d", apple:"https://music.apple.com/us/song/dancing-in-hell/1834863708"},
-    { id: 2, title: "Reality", genre: "Big Room", bpm: 120, key: "8A", art: "covers/reality.jpg", lyrics: "(Drive)\n(Drive)\n(Drive)\nOh could this be\nReality...\n(Drive)\n(Drive)\n(Drive)\nOh could this be\nReality...\n\nOh could this be\nReality...\n\n[Instrumental / Bass Drop]\n\nOh could this be\nReality...\nOh could this be\nReality...\n\n[Instrumental / Bass Drop]\n\n(Drive)\n(Drive)\n(Drive)", spotify: "https://open.spotify.com/track/4TB6nUIz8q7THn5YJ1XHyJ?si=9f491ac4b2c54b1b", apple:"https://music.apple.com/us/song/reality/1851931866" }
+    { id: 1, title: "Faraway (Here For You)", genre: "House", bpm: 130, key: "7B", art: "covers/faraway.jpg", lyrics: "I'm always\nFaraway\nI'm gonna be here, right here for you\nI'm gonna be here, right here for you\n\nI'm always\nFaraway\nI'm gonna be here, right here for you\nI'm gonna be here, right here for you\n\nAlways\nFaraway\nI'm gonna be here, right here for you\nI'm gonna be here, right here for you\n\nI'm always\nFaraway\n(Faraway)\n\nI'm always\nFaraway\n(Faraway)\n\nI'm always\nFaraway\nI'm gonna be here, right here for you\nI'm gonna be here, right here for you\n\nI'm always\nFaraway\nI'm gonna be here, right here for you\nI'm gonna be here, right here for you\n\nAlways\nFaraway\nI'm gonna be here, right here for you\nI'm gonna be here, right here for you\n\nHere, here, right here, right here, you\nHere, here, right here, right here, you\nHere, here, right here, right here, you\nHere, here, right here, right here, you\nHere, here, right here, right here, you\nHere, here, right here, right here, you\nHere, here, right here, right here, you\nI'm gonna be here, right here for you", spotify: "https://open.spotify.com/track/1fzGfHekLb4fY9BfyX9HrD?si=f6b46d5d6ec744b9", apple:"https://music.apple.com/us/album/faraway-here-for-you/6798909945?i=6798909946" },
+    { id: 2, title: "Dancing in Hell", genre: "Electro-House", bpm: 120, key: "3B", art: "covers/dancinginhell.jpg", lyrics: "The angels are dancing in hell tonight\nSo let yourself run free\nNo one you have to be\nIt's just you and me\nThe angels are dancing in hell tonight\nJust enjoy that freedom\nDon't know where it leads us...\n\nThe sky won't even put up a fight\nBecause the angels are dancing in hell tonight\nNo the sky won't even put up a fight\nBecause the angels are dancing in hell tonight\nDancing in hell tonight\nDancing in hell tonight\n\n[Bass Drop]\n\nThe angels are dancing in hell tonight\nSo let yourself run free\nNo one you have to be\nIt's just you and me\nThe angels are dancing in hell tonight\nJust enjoy that freedom\nDon't know where it leads us...\n\nFreedom\nDon't know where it\nFreedom\nDon't know where it\nFreedom\nDon't know where it\nBecause the angels are dancing in hell tonight\n\n[Bass Drop]\n\nDancing in hell, dancing in hell, dancing in hell tonight\nDancing in hell, dancing in hell, dancing in hell tonight\nDancing in hell, dancing in hell, dancing in hell tonight\nDancing in hell, dancing in hell, dancing in hell tonight\n\n[Bass Drop]\n\nBecause the angels are dancing in hell tonight\nDancing in hell tonight", spotify: "https://open.spotify.com/track/4H93zNQNCBmlEVPsbwRnkT?si=3ccd2c91528a4c2d", apple:"https://music.apple.com/us/song/dancing-in-hell/1834863708"},
+    { id: 3, title: "Reality", genre: "Big Room", bpm: 120, key: "8A", art: "covers/reality.jpg", lyrics: "(Drive)\n(Drive)\n(Drive)\nOh could this be\nReality...\n(Drive)\n(Drive)\n(Drive)\nOh could this be\nReality...\n\nOh could this be\nReality...\n\n[Instrumental / Bass Drop]\n\nOh could this be\nReality...\nOh could this be\nReality...\n\n[Instrumental / Bass Drop]\n\n(Drive)\n(Drive)\n(Drive)", spotify: "https://open.spotify.com/track/4TB6nUIz8q7THn5YJ1XHyJ?si=9f491ac4b2c54b1b", apple:"https://music.apple.com/us/song/reality/1851931866" }
 ];
 
 // Camelot Wheel Color Mapping
@@ -127,3 +128,39 @@ if (songDetailContainer) {
         songDetailConstainer.innerHTML = `<h2>Song not found</h2><a href="discography.html" class="btn">Back to Discography</a>`;
     }
 }
+
+// --- New Release Popup Controller ---
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('release-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    if (modal && closeBtn) {
+        // Show modal 1 second after page load if not already seen this session
+        if (!sessionStorage.getItem('hasSeenReleasePopup')) {
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 1000);
+        }
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            sessionStorage.setItem('hasSeenReleasePopup', 'true');
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+
+        // Close on clicking backdrop (outside card)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+});

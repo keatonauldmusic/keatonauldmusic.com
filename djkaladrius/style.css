@@ -329,3 +329,135 @@ footer {
     .track-item { flex-direction: column; text-align: center; gap: 10px; }
     .track-info { text-align: center; }
 }
+
+
+/* --- New Single Release Popup --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 7, 20, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10005; /* Sits above standard elements and trail canvas */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-card {
+    position: relative;
+    background: var(--bg-panel);
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 35px rgba(0, 240, 255, 0.3), inset 0 0 15px rgba(181, 55, 242, 0.2);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    max-width: 460px;
+    width: 90%;
+    text-align: center;
+    transform: scale(0.8) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.active .modal-card {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--neon-purple);
+    text-shadow: 0 0 12px var(--neon-purple);
+    transform: scale(1.2) rotate(90deg);
+}
+
+.modal-badge {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    padding: 4px 14px;
+    background: rgba(181, 55, 242, 0.15);
+    border: 1px solid var(--neon-purple);
+    color: var(--neon-purple);
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(181, 55, 242, 0.3);
+}
+
+.modal-art {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    margin: 0 auto 1.2rem auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.modal-art:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px var(--neon-blue);
+}
+
+.modal-subtitle {
+    color: var(--neon-blue);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.modal-actions .btn {
+    margin: 5px;
+    padding: 10px 22px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+    .modal-card {
+        padding: 2rem 1.2rem;
+    }
+    .modal-art {
+        width: 130px;
+        height: 130px;
+    }
+}
