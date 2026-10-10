@@ -263,7 +263,6 @@ fieldsToValidate.forEach(field => {
 });
 
 form.addEventListener('submit', function (e) {
-  e.preventDefault();
   let isFormValid = true;
 
   fieldsToValidate.forEach(field => {
@@ -275,6 +274,7 @@ form.addEventListener('submit', function (e) {
   if (isFormValid) {
     window.location.href="success.html"
   } else {
+    e.preventDefault();
     form.querySelector('.invalid')?.focus();
   }
 });
