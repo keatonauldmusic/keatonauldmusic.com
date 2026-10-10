@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beats | Keaton Auld</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/logocircle.ico">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <a href="index.html" class="logo"><img src="/logo.png" alt="Keaton Auld Logo"></a>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <!-- External link for merch -->
+            <li><a class="merch-link" href="https://keatonauldmusic.printful.me/" target="_blank">Merch <i
+                        class="fa-solid fa-square-up-right"></i></a></li>
+            <li><a class="selected" href="beats.html">Beats</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://open.spotify.com/artist/2y6SpHr7JZihby500Uehnj?si=SCUSc3GUTIeN8-hMjgUZfQ"
+                target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/keaton-auld/1716264415" target="_blank"><i
+                    class="fab fa-apple"></i></a>
+            <a href="https://youtube.com/@keatonauldmusic?si=fe4wx8QYL7FmGSo-" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/keatonauldmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@keatonauldmusic" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </header>
+
+    <main class="container fade-in">
+        <h2>Beat Request</h2>
+
+        <form id="beat-request-form" novalidate netlify method="POST">
+            <fieldset>
+                <legend>Your Information</legend>
+
+                <div id="div-name">
+                    <label class="required">
+                        <span class="label">First Name</span>
+                        <input type="text" id="first-name" placeholder="John..." required>
+                        <span class="error-message" id="first-name-error" aria-live="polite"></span>
+                    </label>
+                    <label class="required">
+                        <span class="label">Last Name</span>
+                        <input type="text" id="last-name" placeholder="Schuster..." required>
+                        <span class="error-message" id="last-name-error" aria-live="polite"></span>
+                    </label>
+                </div>
+
+                <label class="required">
+                    <span class="label">Email</span>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <span class="error-message" id="email-error" aria-live="polite"></span>
+                </label>
+
+                <label>
+                    <span class="label">Preferred Contact Method</span>
+                    <span>Leave blank for email. If you want to communicate through social media please provide your
+                        username</span>
+                    <input type="text" id="contact-method" placeholder="Instagram (@djkaladrius)">
+                </label>
+
+                <label class="required">
+                    <span class="label">Artist Name </span>
+                    <input id="artist-name" placeholder="John Summit..." required>
+                    <span class="error-message" id="artist-name-error" aria-live="polite"></span>
+                </label>
+                <label>
+                    <span class="label">Artist Website</span>
+                    <span>Where can I listen to your music? (Spotify preferred)</span>
+                    <input type="URL" id="website" placeholder="open.spotify/...">
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Logistics</legend>
+
+                <label for="contract" class="required">
+                    <span class="label">Purchase Option</span>
+                    <div class="custom-select-wrapper">
+                        <select id="contract" required>
+                            <option value="" disabled selected>Select a Purchase Option</option>
+                            <option value="basic">Basic</option>
+                            <option value="trackout">Trackout</option>
+                            <option value="exclusive">Exclusive</option>
+                            <option value="full">Full Production</option>
+                        </select>
+                    </div>
+
+                    <span class="error-message" id="contract-error" aria-live="polite"></span>
+
+                </label>
+
+                <label>
+                    <span class="label">Contract Alterations</span>
+                    <span>List desired changes to the terms of the purchase option above (if any). I will contact you to
+                        follow up on any changes so we can craft the contract you need.</span>
+                    <textarea id="contract-details"
+                        placeholder="I need an extra revision for my basic lease..."></textarea>
+                </label>
+
+                <label for="deadline">
+                    <span class="label">Deadline</span>
+                    <span>I do <strong>not</strong> guarantee to meet any deadlines less than one month in advance, but
+                        I do my best to accomodate for any scheduling requirements.</span>
+                    <input id="deadline" type="date">
+                </label>
+
+                <label for="deadline-binding">
+                    <div class="checkbox-and-label">
+                        <input type="checkbox" id="deadline-binding">
+                        <span class="label">Deadling is binding</span>
+                        <span>Check this if you will no longer be able/willing to pay for the beat past the selected
+                            deadline</span>
+                    </div>
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Beat Details</legend>
+                <label for="genre-select" class="required">
+                    <span class="label">Genre</span>
+
+                    <div class="custom-select-wrapper">
+                        <select name="genre" id="genre-select" required>
+                            <option value="" disabled selected>Select a Genre / Vibe</option>
+
+                            <!-- HIP-HOP, TRAP & DRILL -->
+                            <optgroup label="Hip-Hop / Trap / Drill">
+                                <option value="trap-dark">Dark Trap (Future, Metro Boomin, 21 Savage)</option>
+                                <option value="trap-melodic">Melodic Trap (Lil Baby, Gunna, Roddy Ricch)</option>
+                                <option value="drill-uk-ny">UK / NY Drill (Pop Smoke, Fivio Foreign, Central Cee)
+                                </option>
+                                <option value="rage-synth">Rage / Synth Trap (Playboi Carti, Yeat, Ken Carson)</option>
+                                <option value="boombap-soulful">Boom Bap (J. Cole, Joey Bada$$, Kendrick Lamar)</option>
+                            </optgroup>
+
+                            <!-- R&B & SOUL -->
+                            <optgroup label="R&B / Soul / Afro">
+                                <option value="rnb-modern-trap">Trap R&B / Modern R&B (Bryson Tiller, Tory Lanez, Summer
+                                    Walker)
+                                </option>
+                                <option value="rnb-alternative-dark">Alternative / Dark R&B (The Weeknd, Brent Faiyaz,
+                                    PARTYNEXTDOOR)</option>
+                                <option value="afrobeats-dancehall">Afrobeats / Afro-Pop (Burna Boy, Wizkid, Rema)
+                                </option>
+                                <option value="amapiano">Amapiano (Tyler ICU, Kabza De Small, Uncle Waffles)</option>
+                            </optgroup>
+
+                            <!-- EDM & ELECTRONIC -->
+                            <optgroup label="EDM / Electronic">
+                                <option value="house-tech">Tech House (Fisher, Chris Lake, Dom Dolla)</option>
+                                <option value="house-deep-slap">Deep / Slap House (Imanbek, Topic, Meduza)</option>
+                                <option value="drum-and-bass">Drum & Bass (DnB) (Chase & Status, Sub Focus, Luude)
+                                </option>
+                                <option value="hyperpop-electronic">Hyperpop / Cyberpunk (Charli xcx, 100 gecs, Glaive)
+                                </option>
+                                <option value="edm-pop-crossover">Dance Pop / EDM Crossover(The Chainsmokers, Calvin
+                                    Harris,
+                                    Tiësto)</option>
+                            </optgroup>
+
+                            <optgroup label="Other">
+                                <option value="other">Other (please specify)</option>
+                            </optgroup>
+                        </select>
+
+                    </div>
+                    <span class="error-message" id="genre-error" aria-live="polite"></span>
+                </label>
+
+                <div id="other-genre-container" style="display: none; margin-top: 10px;">
+                    <label for="other-genre">
+                        <span class="label">Please specify:</span>
+                        <input type="text" id="other-genre" name="other_genre" />
+                    </label>
+                </div>
+
+                <div class="div-beat-details">
+                    <label for="bpm">
+                        <span class="label">BPM Range</span>
+
+                        <input id="bpm" type="number" placeholder="90-100">
+                    </label>
+                    <label for="key">
+                        <span class="label">Key</span>
+
+                        <input id="key" type="text" placeholder="C#m">
+                    </label>
+                </div>
+
+                <label class="required">
+                    <span class="label">Inspirations</span>
+
+                    <span>List any songs that you want to inspire the sound of this beat. Around three is ideal.</span>
+                    <textarea id="inspo" placeholder="e.g. 'producer, producer' by Keaton Auld" required></textarea>
+
+                    <span class="error-message" id="inspiration-error" aria-live="polite"></span>
+                </label>
+
+                <label class="required">
+                    <span class="label">Details</span>
+
+                    <span>This is your chance to list any instruments or other artistic choices you want incorporated
+                        into your beat.</span>
+                    <textarea id="details" placeholder="I really want a punchy snare...a trumpet would be nice...etc."
+                        required></textarea>
+
+                    <span class="error-message" id="details-error" aria-live="polite"></span>
+                </label>
+
+            </fieldset>
+
+
+            <button type="submit">Submit Request</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://open.spotify.com/artist/2y6SpHr7JZihby500Uehnj?si=SCUSc3GUTIeN8-hMjgUZfQ"
+                target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/keaton-auld/1716264415" target="_blank"><i
+                    class="fab fa-apple"></i></a>
+            <a href="https://youtube.com/@keatonauldmusic?si=fe4wx8QYL7FmGSo-" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/keatonauldmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@keatonauldmusic?is_from_webapp=1&sender_device=pc" target="_blank"><i
+                    class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2026 Telperion Music. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+  // Parse the URL query string
+  const params = new URLSearchParams(window.location.search);
+  const deptValue = params.get("contract");
+
+  // If a parameter exists, find the dropdown and set its value
+  if (deptValue) {
+    const dropdown = document.getElementById("contract");
+    dropdown.value = deptValue;
+  }
+});
+</script>
+</body>
+
+</html>

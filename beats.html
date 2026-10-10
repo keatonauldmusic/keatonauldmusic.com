@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beats | Keaton Auld</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/logocircle.ico">
 </head>
+
 <body>
     <!-- Header / Navigation -->
     <header>
-        <a href="index.html" class="logo"><img src="/logo.png" alt = "Keaton Auld Logo"></a>
+        <a href="index.html" class="logo"><img src="/logo.png" alt="Keaton Auld Logo"></a>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="music.html">Music</a></li>
             <!-- External link for merch -->
-            <li><a class="merch-link" href="https://keatonauldmusic.printful.me/" target="_blank">Merch <i class="fa-solid fa-square-up-right"></i></a></li>
+            <li><a class="merch-link" href="https://keatonauldmusic.printful.me/" target="_blank">Merch <i
+                        class="fa-solid fa-square-up-right"></i></a></li>
             <li><a class="selected" href="beats.html">Beats</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="social-icons">
-            <a href="https://open.spotify.com/artist/2y6SpHr7JZihby500Uehnj?si=SCUSc3GUTIeN8-hMjgUZfQ" target="_blank"><i class="fab fa-spotify"></i></a>
-            <a href="https://music.apple.com/us/artist/keaton-auld/1716264415" target="_blank"><i class="fab fa-apple"></i></a>
-            <a href="https://youtube.com/@keatonauldmusic?si=fe4wx8QYL7FmGSo-" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/artist/2y6SpHr7JZihby500Uehnj?si=SCUSc3GUTIeN8-hMjgUZfQ"
+                target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/keaton-auld/1716264415" target="_blank"><i
+                    class="fab fa-apple"></i></a>
+            <a href="https://youtube.com/@keatonauldmusic?si=fe4wx8QYL7FmGSo-" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
             <a href="https://www.instagram.com/keatonauldmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@keatonauldmusic" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
@@ -36,30 +44,364 @@
         <div class="beats-container">
             <h1>producer, producer, make me a beat</h1>
             <p>
-                Browse my full catalog of instrumentals, available for lease right now. Whether you need something dark and atmospheric, or hard-hitting trap drums, the vault is open. 
+                I offer a wide range of production options, from affordable MP3 and WAV files to complete vocal
+                production and mixing. I am happy to work in almost any genre, but my talents lie in the genres listed
+                below.
                 <br><br>
-                <strong>Looking for something custom?</strong> The best way to request a custom beat or negotiate exclusive rights is to email me directly. Let's build your next record from the ground up.
+                <strong>Looking for something custom?</strong> Commissions allow me to craft the perfect beat to
+                match your artistic vision. Options and pricing can be found below, along with instructions for the best
+                way to contact me for commission work. I can't wait to build your next record with you!
             </p>
 
-            <div class="beats-actions">
-                <!-- Replace with your actual Airbit store link -->
-                <a href="https://airbit.com/KeatonAuldMusic" target="_blank" class="btn-primary">Airbit Library</a>
-                <a href="contact.html" class="btn-secondary">Contact Me</a>
+            <div class="quick-links">
+                <h2 class="beat-page-header"><i class="fa-solid fa-bolt"></i> Quick Links</h2>
+                <p>If you're new here, I recommend exploring this entire page to find what's right for you. But, if you
+                    know where you want to go these links will help you. <strong>Important: </strong>do not submit a commission request without first familiarizing yourself with the options and
+                    terms below. This link is for the convenience of returning artists.</p>
+
+                <div class="quick-links-list">
+                    <div class="quick-links-item fade-in"
+                        onclick="window.location.href='request.html';">
+                        <h4>Request Form</h4>
+                    </div>
+                    <div class="quick-links-item fade-in" onclick="window.open('https://airbit.com/KeatonAuldMusic', target='_blank');">
+                        <h4>Explore Airbit Library*</h4>
+                    </div>
+                    <div class="quick-links-item fade-in" onclick="window.location.href='pay.html';">
+                        <h4>Looking to Pay? Click Here</h4>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="tabs-container">
+                <!-- Header Controls -->
+                <nav class="tab-header" role="tablist" aria-label="Content Tabs">
+                    <div class="tab-indicator" id="indicator"></div>
+                    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="pane-1"
+                        id="tab-1">Commissions</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-2" id="tab-2">Published
+                        Beats</button>
+                </nav>
+
+                <!-- Swipeable Content Viewport -->
+                <div class="tab-viewport" id="viewport">
+                    <div class="tab-track" id="track">
+                        <!-- Pane 1 -->
+                        <section class="tab-pane" role="tabpanel" id="pane-1" aria-labelledby="tab-1">
+                            <h2 id="purchase-options" class="beat-page-header">Explore Purchase Options</h2>
+                            <p>All commissioned beats are crafted entirely to your specifications, based on any
+                                references and details you choose to provide. However, you can still choose your level
+                                of investment, which will define certain features such as how many revisions I offer
+                                before the beat is final, and whether or not I am free to upload the beat to my beat
+                                library after your purchase (exclusivity). Each of these features is individually
+                                negotiable, but the options below should give you a basic idea of the choice you have.
+                                <br><br>
+                                Each of the options below can be assumed to have a Producing/Publishing split of 50/50 unless some other agreement is made.
+                            </p>
+                            <div class="beat-pricing-container">
+
+                                <!-- View Switcher -->
+                                <div class="beat-pricing-controls">
+                                    <button class="beat-toggle-btn active"
+                                        onclick="switchBeatView('cards')">Cards</button>
+                                    <button class="beat-toggle-btn" onclick="switchBeatView('table')">Table
+                                        View</button>
+                                </div>
+
+                                <!-- Cards Grid Layout -->
+                                <div id="beatCardsView" class="beat-cards-grid fade-in">
+
+                                    <!-- Basic Lease -->
+                                    <div class="beat-card fade-in">
+                                        <div>
+                                            <h3>Basic Lease</h3>
+                                            <div class="price">$29</div>
+                                            <p class="ideal-for">Ideal for artists who like to lay down vocals on top of
+                                                a finished track.
+                                            </p>
+                                            <ul>
+                                                <li><strong>Audio:</strong> Mastered WAV (+ MP3)</li>
+                                                <li><strong>Producer Tag:</strong> Yes</li>
+                                                <li><strong>Exclusive:</strong> No</li>
+                                                <li><strong>Vocal Mixing:</strong> No</li>
+                                                <li><strong>Revisions:</strong> 1</li>
+                                            </ul>
+                                        </div>
+                                        <button class="beat-btn" onclick="window.location.href='request.html?contract=basic'">Select License</button>
+                                    </div>
+
+                                    <!-- Standard Lease -->
+                                    <div class="beat-card fade-in">
+                                        <div>
+                                            <h3>Trackout</h3>
+                                            <div class="price">$49</div>
+                                            <p class="ideal-for">Best for artists working with professional mixing
+                                                engineers.
+                                            </p>
+                                            <ul>
+                                                <li><strong>Audio:</strong> WAV+ Trackout Stems</li>
+                                                <li><strong>Producer Tag:</strong> Yes</li>
+                                                <li><strong>Exclusive:</strong> No</li>
+                                                <li><strong>Vocal Mixing:</strong> No</li>
+                                                <li><strong>Revisions:</strong> 3</li>
+                                            </ul>
+                                        </div>
+                                        <button class="beat-btn" onclick="window.location.href='request.html?contract=trackout'">Select License</button>
+                                    </div>
+
+                                    <!-- Premium Lease -->
+                                    <div class="beat-card popular fade-in">
+                                        <span class="beat-card-badge">Popular</span>
+                                        <div>
+                                            <h3>Exclusive</h3>
+                                            <div class="price">$99</div>
+                                            <p class="ideal-for">Ideal for those who want to make a track uniquely their
+                                                own.</p>
+                                            <ul>
+                                                <li><strong>Audio:</strong> WAV + Trackout Stems</li>
+                                                <li><strong>Producer Tag:</strong> Optional</li>
+                                                <li><strong>Exclusive:</strong> Yes</li>
+                                                <li><strong>Vocal Mixing:</strong> No</li>
+                                                <li><strong>Revisions:</strong> &infin; *</li>
+
+                                            </ul>
+                                        </div>
+                                        <button class="beat-btn" onclick="window.location.href='request.html?contract=exclusive'">Select License</button>
+                                    </div>
+
+                                    <!-- Exclusive Rights -->
+                                    <div class="beat-card fade-in">
+                                        <div>
+                                            <h3>Full Production</h3>
+                                            <div class="price">$300+</div>
+                                            <p class="ideal-for">Vocal mixing and a release-ready master.
+                                            </p>
+                                            <ul>
+                                                <li><strong>Audio:</strong> Full Studio Master</li>
+                                                <li><strong>Producer Tag:</strong> Optional</li>
+                                                <li><strong>Exclusive:</strong> Yes</li>
+                                                <li><strong>Vocal Mixing:</strong> Yes</li>
+                                                <li><strong>Revisions:</strong> &infin; *</li>
+
+                                            </ul>
+                                        </div>
+                                        <button class="beat-btn" onclick="window.location.href='request.html?contract=full'">Select License</button>
+                                    </div>
+
+                                </div>
+
+                                <!-- Comparison Table Layout -->
+                                <div id="beatTableView" class="fade-in beat-table-wrapper">
+                                    <table class="beat-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Features</th>
+                                                <th>Basic ($29)</th>
+                                                <th>Trackout ($49)</th>
+                                                <th>Exclusive ($99)</th>
+                                                <th>Full ($300+)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="feature-title">Deliverables</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <td>WAV (+MP3)</td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Trackout</td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Studio Master</td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="feature-title">Services</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>                                            
+                                            <tr>
+                                                <td>Revisions</td>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td>&infin;</td>
+                                                <td>&infin;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vocal Mixing</td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th class="feature-title">Rights</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>  
+                                            <tr>
+                                                <td>Exclusive</td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                            </tr>     
+                                            
+                                            <tr>
+                                                <td>Remove Tag</td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-x-icon">&times;</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                                <td><span class="table-check-icon">✓</span></td>
+                                            </tr>   
+                                            <tr>
+                                                <td></td>
+                                                <td><button class="beat-btn" onclick="window.location.href='request.html?contract=basic'">Select</button></td>
+                                                <td><button class="beat-btn" onclick="window.location.href='request.html?contract=trackout'">Select</button></td>
+                                                <td><button class="beat-btn" onclick="window.location.href='request.html?contract=exclusive'">Select</button></td>
+                                                <td><button class="beat-btn" onclick="window.location.href='request.html?contract=full'">Select</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <h2 class="beat-page-header">Payment Methods</h2>
+                            <p>Payment must be provided before the final beat is sent to your email. I use PayPal to securely process payments. A complete list of payment methods I accept is listed below. <br> If you are looking to pay for a beat now, please <a href="pay.html">click here.</a></p>
+                            <div class="paypal-methods-container">
+                                <div class="paypal-methods-header">
+                                    <h3 class="paypal-methods-title">Accepted Payment Options</h3>
+                                    <p class="paypal-methods-subtitle">Processed securely via PayPal (No PayPal account
+                                        required for
+                                        card payments)</p>
+                                </div>
+
+                                <ul class="paypal-methods-list">
+                                    <li class="paypal-method-item">
+                                        <div class="paypal-method-info">
+                                            <span class="paypal-check-icon">✓</span>
+                                            <span>PayPal Balance & Connected Accounts</span>
+                                        </div>
+                                        <span class="paypal-method-note">Instant</span>
+                                    </li>
+
+                                    <li class="paypal-method-item">
+                                        <div class="paypal-method-info">
+                                            <span class="paypal-check-icon">✓</span>
+                                            <span>Debit & Credit Cards</span>
+                                        </div>
+                                        <span class="paypal-method-note">Guest Checkout</span>
+                                    </li>
+
+                                    <li class="paypal-method-item">
+                                        <div class="paypal-method-info">
+                                            <span class="paypal-check-icon">✓</span>
+                                            <span>PayPal Pay in 4 / Pay Monthly</span>
+                                        </div>
+                                        <span class="paypal-method-note">Buy Now, Pay Later</span>
+                                    </li>
+
+                                    <li class="paypal-method-item">
+                                        <div class="paypal-method-info">
+                                            <span class="paypal-check-icon">✓</span>
+                                            <span>Venmo</span>
+                                        </div>
+                                        <span class="paypal-method-note">Mobile / US only</span>
+                                    </li>
+
+                                    <li class="paypal-method-item">
+                                        <div class="paypal-method-info">
+                                            <span class="paypal-check-icon">✓</span>
+                                            <span>Pay directly from Bank Account</span>
+                                        </div>
+                                        <span class="paypal-method-note">eCheck / Bank Transfer</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Pane 2 -->
+                        <section class="tab-pane" role="tabpanel" id="pane-2" aria-labelledby="tab-2">
+                            <h2 class="beat-page-header">Beat Samples</h2>
+                            <iframe class="beat-embed"
+                                src="https://solo.airbit.com/beat/KeatonAuldMusic/bigxthaplug-type-beat-graduation"
+                                width="100%" height="215px"></iframe>
+                            <div class="beats-actions">
+                                <!-- Replace with your actual Airbit store link -->
+                                <a href="https://airbit.com/KeatonAuldMusic" target="_blank" class="btn-primary">Airbit
+                                    Library*</a>
+                            </div>
+                            <p class="smaller-text" id="airbit-clarification"><strong>*A Note on Airbit: </strong>Please
+                                note that
+                                purchase options and contract agreements listed on <a
+                                    href="https://airbit.com/KeatonAuldMusic">airbit.com</a> differ from those listed
+                                above. These
+                                purchase options stand for any Keaton Auld beat published through Airbit. However,
+                                exclusive
+                                licenses are not available for purchase through Airbit. To request an exclusive license
+                                to a beat
+                                found on Airbit, simply follow the instructions above for requesting an exclusive
+                                license, and
+                                provide a link to the airbit.com page of the beat. Note additionally that because beats
+                                that are
+                                already in the Keaton Auld library are not custom commissions, exclusive licenses can be
+                                purchased
+                                at a negotiable discount. However, be aware that because beats posted on Airbit have
+                                been available
+                                for lease, you are not guaranteed sole publishing rights over any individuals who may
+                                have already
+                                purchased a lease.</p>
+
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
         </div>
     </main>
 
     <footer>
         <div class="social-icons">
-            <a href="https://open.spotify.com/artist/2y6SpHr7JZihby500Uehnj?si=SCUSc3GUTIeN8-hMjgUZfQ" target="_blank"><i class="fab fa-spotify"></i></a>
-            <a href="https://music.apple.com/us/artist/keaton-auld/1716264415" target="_blank"><i class="fab fa-apple"></i></a>
-            <a href="https://youtube.com/@keatonauldmusic?si=fe4wx8QYL7FmGSo-" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/artist/2y6SpHr7JZihby500Uehnj?si=SCUSc3GUTIeN8-hMjgUZfQ"
+                target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/keaton-auld/1716264415" target="_blank"><i
+                    class="fab fa-apple"></i></a>
+            <a href="https://youtube.com/@keatonauldmusic?si=fe4wx8QYL7FmGSo-" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
             <a href="https://www.instagram.com/keatonauldmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@keatonauldmusic?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.tiktok.com/@keatonauldmusic?is_from_webapp=1&sender_device=pc" target="_blank"><i
+                    class="fab fa-tiktok"></i></a>
         </div>
         <p>&copy; 2026 Telperion Music. All rights reserved.</p>
     </footer>
 
     <script src="/scripts.js"></script>
 </body>
+
 </html>

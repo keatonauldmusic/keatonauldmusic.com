@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Keaton Auld</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/logocircle.ico">
+
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=BAAG1mk6_6d2pdozOk5rr9zH55cXYqQXLjwsMEj0H5fSspbUBrM1-G0Ck8uexCZoXmaZv7Hs42-zQoJulo&components=hosted-buttons&enable-funding=venmo&currency=USD">
+        </script>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <a href="index.html" class="logo"><img src="/logo.png" alt="Keaton Auld Logo"></a>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <!-- External link for merch -->
+            <li><a class="merch-link" href="https://keatonauldmusic.printful.me/" target="_blank">Merch <i
+                        class="fa-solid fa-square-up-right"></i></a></li>
+            <li><a class="selected" href="beats.html">Beats</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://open.spotify.com/artist/2y6SpHr7JZihby500Uehnj?si=SCUSc3GUTIeN8-hMjgUZfQ"
+                target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/keaton-auld/1716264415" target="_blank"><i
+                    class="fab fa-apple"></i></a>
+            <a href="https://youtube.com/@keatonauldmusic?si=fe4wx8QYL7FmGSo-" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/keatonauldmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@keatonauldmusic" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </header>
+
+    <main class="container fade-in">
+        <div class="beats-container">
+            <h1>payment</h1>
+
+            <p class="important"><strong>IMPORTANT: </strong>this payment form will not initiate the production of a Keaton Auld beat, nor is it a guarantee of services to be rendered unless a previous agreement has been reached. ONLY use this payment link if you are in the process of commissioning a beat and have been asked to pay for it. You should also have recieved an official Keaton Auld invoice for this purchase, so this option is merely a backup. Nonetheless, payments that are expected will be accepted.</p>
+            <div class="paypal-embed" id="paypal-container-3U4MT6TYZGTFQ"></div>
+            <script>
+                paypal.HostedButtons({
+                    hostedButtonId: "3U4MT6TYZGTFQ",
+                }).render("#paypal-container-3U4MT6TYZGTFQ")
+            </script>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://open.spotify.com/artist/2y6SpHr7JZihby500Uehnj?si=SCUSc3GUTIeN8-hMjgUZfQ"
+                target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/keaton-auld/1716264415" target="_blank"><i
+                    class="fab fa-apple"></i></a>
+            <a href="https://youtube.com/@keatonauldmusic?si=fe4wx8QYL7FmGSo-" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/keatonauldmusic/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@keatonauldmusic?is_from_webapp=1&sender_device=pc" target="_blank"><i
+                    class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2026 Telperion Music. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts.js"></script>
+</body>
+
+</html>

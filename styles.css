@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *::selection {
   background-color: var(--brand-red-glow);
   color: var(--text-main);
@@ -120,7 +124,7 @@ header {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  height:100%;
+  height: 100%;
 }
 
 .social-icons {
@@ -151,7 +155,7 @@ header {
   border-radius: 4px;
   transition: all var(--transition-speed);
   cursor: pointer;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -182,8 +186,9 @@ header {
 
 /* Layout Utilities */
 main {
-/*   min-height: 100vh;
- */  /* padding-top: 10px; */
+  /*   min-height: 100vh;
+ */
+  /* padding-top: 10px; */
   /* offset for header */
 }
 
@@ -201,18 +206,18 @@ main {
   justify-content: space-between;
 }
 
-.hero iframe{
+.hero iframe {
   border-radius: 8px;
   aspect-ratio: fixed;
 
 }
 
-.hero-main{
+.hero-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--bg-card);
-  border-radius:8px;
+  border-radius: 8px;
   min-width: 90%;
 
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -220,28 +225,31 @@ main {
   transition: transform var(--transition-speed);
 }
 
-.hero-main img{
-  width:100%;
+.hero-main img {
+  width: 100%;
   -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* Crops the image to fit the container without distortion */
-  object-position: calc(center+100px); /* Focuses the crop on the center (can be top, left, etc.) */
+  object-fit: cover;
+  /* Crops the image to fit the container without distortion */
+  object-position: calc(center+100px);
+  /* Focuses the crop on the center (can be top, left, etc.) */
 }
 
-.hero-img-cropper{
-  width: 100%;         /* Define your desired width */
-  height: 400px;  
+.hero-img-cropper {
+  width: 100%;
+  /* Define your desired width */
+  height: 400px;
 }
 
-.hero h1{
-  bottom:0;
+.hero h1 {
+  bottom: 0;
   margin-top: -50px;
   font-size: 3.5rem;
   position: relative;
   display: inline-block;
-  margin-bottom:3%;
+  margin-bottom: 3%;
 }
 
 .hero h1::after {
@@ -260,13 +268,13 @@ main {
   width: 100%;
 }
 
-.hero-links{
-  width:100%;
-  display:flex;
-  justify-content:space-around;
+.hero-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
-.hero-links a{
+.hero-links a {
   padding: 1rem 2rem;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -275,13 +283,13 @@ main {
   border-radius: 8px;
   transition: all var(--transition-speed);
   cursor: pointer;
-  display:flex;
+  display: flex;
   justify-content: center;
-  width:100%;
+  width: 100%;
 }
 
-.hero-links a:hover{
-  color:var(--text-main);
+.hero-links a:hover {
+  color: var(--text-main);
   background-color: var(--bg-dark);
   transform: translateY(-5px);
 }
@@ -300,34 +308,34 @@ main {
 }
 
 
-.hero-traits{
-  width:100%;
-  display:flex;
+.hero-traits {
+  width: 100%;
+  display: flex;
   justify-content: space-around;
   margin-bottom: 3%;
 }
 
-.icon-above-text{
-  width:100%;
-  display:flex;
+.icon-above-text {
+  width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.icon-above-text i{
+.icon-above-text i {
   font-size: 3rem;
   margin-bottom: 15px;
 }
 
 
-.hero-panel-img{
-  width:50%;
+.hero-panel-img {
+  width: 50%;
   object-fit: cover;
-  width:100%
+  width: 100%
 }
 
-.hero-panel .img-container{
-  height:50%;
+.hero-panel .img-container {
+  height: 50%;
   overflow: hidden;
 
   border-radius: 8px;
@@ -340,22 +348,23 @@ main {
   transition: filter 0.3s ease;
 
 }
-.img-container img{
-  height:100%;
+
+.img-container img {
+  height: 100%;
 }
 
-.kaladrius{
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+.kaladrius {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
 }
 
-.hero-panel-text{
+.hero-panel-text {
   aspect-ratio: 1/1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
-  height:20%;
+  height: 20%;
   overflow: hidden;
 
   border-radius: 8px;
@@ -364,17 +373,17 @@ main {
   perspective: 1000px;
   margin: 5%;
 
-  color:var(--text-main);
+  color: var(--text-main);
   transition: 0.3s ease;
 
 }
 
-.hero-panel-text img{
-  width:20%;
+.hero-panel-text img {
+  width: 20%;
 }
 
-.muted{
-  color:var(--text-muted)
+.muted {
+  color: var(--text-muted)
 }
 
 /* .hero-content {
@@ -568,7 +577,6 @@ main {
 }
 
 .beats-container p {
-  font-size: 1.2rem;
   margin: 2rem 0;
   color: var(--text-muted);
 }
@@ -741,25 +749,771 @@ footer p {
 
 
 .merch-link {
-  position:relative;
+  position: relative;
 }
 
 
-  .merch-link i{
-    position: absolute;
-    right: 0px;             /* Initial resting spot */
-    top: 0%;
-    transform: translateY(-50%) translateX(-8px); /* Shifted left and centered vertically */
-    opacity: 0;
-  
-    /* Smoothly animate both the fade and the slide */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+.merch-link i {
+  position: absolute;
+  right: 0px;
+  /* Initial resting spot */
+  top: 0%;
+  transform: translateY(-50%) translateX(-8px);
+  /* Shifted left and centered vertically */
+  opacity: 0;
+
+  /* Smoothly animate both the fade and the slide */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.merch-link:hover i {
+  opacity: 1;
+  transform: translateY(-100%) translateX(0);
+  /* Slides smoothly into position */
+}
+
+
+/* Minimal Reset & Layout Scoped to .beat-pricing-container */
+.beat-pricing-container {
+  font-family: var(--font-body);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* View Switcher Controls */
+.beat-pricing-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.beat-toggle-btn {
+  padding: 6px 14px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-muted)
+}
+
+.beat-toggle-btn.active {
+  background: var(--bg-darker);
+  color: var(--text-main);
+}
+
+/* Cards Grid View */
+.beat-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.beat-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: transform var(--transition-speed);
+}
+
+.beat-card.popular {
+  box-shadow: 0 0 10px var(--brand-red);
+  position: relative;
+}
+
+.beat-card-badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background: var(--brand-red);
+  font-size: 10px;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.beat-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-family: var(--font-heading);
+}
+
+.beat-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
+}
+
+.beat-card .ideal-for {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.beat-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 13px;
+}
+
+.beat-card ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.beat-card ul li:last-child {
+  border-bottom: none;
+}
+
+.beat-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* Styling ready for native link or click handler */
+  text-decoration: none;
+
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  transition: all var(--transition-speed);
+
+}
+
+.beat-btn:hover {
+  color: var(--text-main);
+  background-color: var(--bg-dark);
+  transform: translateY(-5px);
+}
+
+/* Full Comparison Table View */
+.beat-table-wrapper {
+  overflow-x: auto;
+  display: none;
+  /* Toggled via JS */
+}
+
+.beat-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.beat-table th,
+.beat-table td {
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.beat-table th {
+  background: var(--bg-card);
+  font-weight: 600;
+}
+
+.beat-table tr:hover {
+  background: var(--bg-darker);
+}
+
+.beat-table .feature-title {
+  font-weight: 600;
+}
+
+.beat-page-header {
+  padding-top: 10%;
+}
+
+.beat-embed {
+  overflow: hidden;
+  height: 230px;
+  border: none;
+}
+
+.smaller-text {
+  font-size: 13px;
+  text-align: left;
+}
+
+
+.paypal-methods-container {
+  color: var(--text-main);
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  background: var(--bg-card);
+}
+
+.paypal-methods-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.paypal-methods-title {
+  margin: 0 0 4px 0;
+}
+
+.paypal-methods-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.paypal-methods-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paypal-method-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 13px;
+}
+
+.paypal-method-item:last-child {
+  border-bottom: none;
+}
+
+.paypal-method-info {
+  display: flex;
+  align-items: left;
+  gap: 8px;
+}
+
+.paypal-check-icon {
+  color: var(--brand-red);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.paypal-method-note {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.quick-links {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  padding: 5%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 10%;
+}
+
+.quick-links h2 {
+  padding-top: 2%;
+}
+
+.quick-links-list {
+  margin: 3%;
+}
+
+.quick-links-item {
+  width: 100%;
+  display: flex;
+  padding: 3%;
+  border-radius: 8px;
+  transition: var(--transition-speed)
+}
+
+.quick-links-item:hover {
+  background-color: var(--bg-dark);
+  cursor: pointer;
+  transform: translateX(10px);
+}
+
+
+.tabs-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10%;
+}
+
+/* Tab Navigation Header */
+.tab-header {
+  display: flex;
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 6px;
+  gap: 6px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1;
+  transition: color var(--transition-speed) ease;
+  outline: none;
+}
+
+.tab-btn.active {
+  color: var(--text-main);
+}
+
+.tab-btn:focus-visible {
+  outline: 2px solid var(--brand-red);
+}
+
+/* Active Indicator Pill */
+.tab-indicator {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 6px;
+  width: calc((100% - 18px) / 2);
+  /* Calculates width based on 2 tabs + padding */
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+  transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+/* Tab Content Viewport */
+.tab-viewport {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  touch-action: pan-y;
+  /* Allows vertical scrolling while intercepting horizontal swipes */
+  transition: height var(--transition-speed) ease;
+}
+
+.tab-track {
+  display: flex;
+  width: 200%;
+  /* 2 tabs = 200% width */
+  transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Disables CSS transition during touch drag for instant responsiveness */
+.tab-track.dragging {
+  transition: none !important;
+}
+
+.tab-pane {
+  width: 50%;
+  /* Each pane takes half of the 200% track width */
+  padding: 24px;
+  flex-shrink: 0;
+}
+
+.table-check-icon {
+  color: var(--brand-red);
+  font-weight: bold;
+  font-size: 14px;
+  justify-self: center;
+  align-self: center;
+}
+
+.table-x-icon {
+  color: var(--text-muted);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.paypal-embed input {
+  background-color: var(--bg-card);
+}
+
+.important {
+  color: var(--brand-red) !important
+}
+
+#beat-request-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#beat-request-form fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+#beat-request-form {
+  * {
+    transition: var(--transition-speed);
+    font-family: var(--font-body);
   }
 
-  .merch-link:hover i {
-  opacity: 1;
-  transform: translateY(-100%) translateX(0); /* Slides smoothly into position */
+  fieldset {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    background-color: var(--bg-card);
+    padding: 3%;
+    color: var(--text-muted);
+    margin-top: 2%;
+
+    legend {
+      text-transform: uppercase;
+    }
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+    color: var(--text-main)
+  }
+
+  input {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    border: solid 1px rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+    padding: 2%;
+    color: var(--text-main);
+    outline: none;
+  }
+
+  input:focus {
+    outline: none;
+    background-color: var(--bg-darker);
+  }
+
+  input:hover {
+    border-color: var(--text-muted);
+  }
+
+  span:not(.label){
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  textarea {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    border: solid 1px rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+    padding: 2%;
+    color: var(--text-main);
+    outline: none;
+    resize:none;
+    height:10rem;
+  }
+
+  textarea:focus {
+    outline: none;
+    background-color: var(--bg-darker);
+  }
+
+  textarea:hover {
+    border-color: var(--text-muted);
+  }
+
+  /* Container used to position a custom arrow */
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
+
+select {
+  /* 1. Reset default browser styles */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  /* 2. Custom styles */
+  width: 100%;
+  padding: 2%; /* Extra right padding so text doesn't overlap the arrow */
+  font-size: 14px;
+  color: var(--text-muted);
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Interactivity states */
+select:hover,
+select:focus {
+  border-color: var(--brand-red);
+}
+
+/* 3. Add a custom downward arrow using a pseudo-element */
+.custom-select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Create a CSS triangle */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--text-muted);
+  pointer-events: none; /* Allows clicks to pass through to the select element */
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper { padding: 2px; }
+input[type="date"]::-webkit-datetime-edit-text { color: var(--text-muted); padding: 0 2px; }
+input[type="date"]::-webkit-datetime-edit-month-field { color: var(--text-main); }
+input[type="date"]::-webkit-datetime-edit-day-field { color: var(--text-main); }
+input[type="date"]::-webkit-datetime-edit-year-field { color: var(--text-main); }
+
+/* Removes default background highlight on active/focused fields */
+input[type="date"]::-webkit-datetime-edit-month-field:focus,
+input[type="date"]::-webkit-datetime-edit-day-field:focus,
+input[type="date"]::-webkit-datetime-edit-year-field:focus {
+  background: none;
+  color: var(--brand-red);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+display:none}
+
+
+input[type="checkbox"]{
+  margin-right: 2%;
+    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+}
+
+/* Container for the checkbox and text */
+.checkbox-and-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Base style for the input - overriding native appearance */
+.checkbox-and-label input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none; /* Safari support */
+  background-color: var(--bg-card);
+  margin: 0;
+  
+  /* Sizing and Border */
+  width: 0.5em;
+  height: 0.5em;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  
+  /* Layout to perfectly center the checkmark */
+  display: grid;
+  place-content: center;
+
+}
+
+/* Creating the checkmark using a pseudo-element */
+.checkbox-and-label input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  background-color: var(--bg-card);
+  
+  /* Draw a checkmark shape using clip-path polygon */
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  
+  /* Hide it by default using scale */
+  transform: scale(0);
+  transform-origin: center;
+}
+
+/* Checked State Styles */
+.checkbox-and-label input[type="checkbox"]:checked {
+  background-color: var(--brand-red);
+  border-color: var(--bg-card);
+}
+
+/* Reveal the checkmark on checked */
+.checkbox-and-label input[type="checkbox"]:checked::before {
+  transform: scale(2);
+}
+
+/* Focus state for keyboard accessibility */
+.checkbox-and-label input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--brand-red);
+  outline-offset: 2px;
+}
+
+/* Hover State adjustments */
+.checkbox-and-label:hover input[type="checkbox"]:not(:checked) {
+  border-color: var(--brand-red);
+}
+
+/* Disabled State */
+.checkbox-and-label input[type="checkbox"]:disabled {
+  background-color: var(--bg-card);
+  border-color: var(--bg-card);
+  cursor: not-allowed;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top:2%;
+  padding: 2%;
+  text-align: center;
+  background: var(--bg-card);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* Styling ready for native link or click handler */
+  text-decoration: none;
+
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  transition: all var(--transition-speed);
+}
+
+button:hover {
+  color: var(--text-main);
+  background-color: var(--bg-dark);
+  transform: translateY(-5px);
+}
+
+input:required {
+  
+}
+
+/* Styles a required input only when it is empty/invalid */
+input:required:invalid {
+  
+}
+
+label:has(input:required) .label::after {
+  content: " *";
+  color: var(--brand-red);
+}
+label:has(textarea:required) .label::after {
+  content: " *";
+  color: var(--brand-red);
+}
+label:has(select:required) .label::after {
+  content: " *";
+  color: var(--brand-red);
+}
+
+/* Hide arrows in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* */
+}
+
+/* Hide arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; /* */
+  appearance: textfield;
+}
+}
+
+
+/* Container to center the animation */
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+/* Base SVG settings */
+.checkmark-svg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 4;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px var(--brand-red);
+  animation: fill-bg .4s cubic-bezier(0.65, 0, 0.45, 1) forwards .3s, 
+             scale-pop .3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards .3s;
+}
+
+/* The outer circle drawing path */
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 4;
+  stroke: var(--brand-red);
+  fill: none;
+  animation: draw-circle .6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+/* The actual checkmark line */
+.checkmark-kick {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: draw-check .3s cubic-bezier(0.65, 0, 0.45, 1) forwards .6s;
+}
+
+/* Keyframe Animations */
+
+/* 1. Draws the green circle boundary outline */
+@keyframes draw-circle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 2. Draws the checkmark icon from left to right */
+@keyframes draw-check {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 3. Fills the inner circle with green background color */
+@keyframes fill-bg {
+  100% {
+    box-shadow: inset 0px 0px 0px 40px var(--brand-red);
+  }
+}
+
+/* 4. Adds a satisfying physical "bounce" or scale pop at the very end */
+@keyframes scale-pop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .hamburger {
@@ -768,8 +1522,9 @@ footer p {
     z-index: 1010;
     /* Keeps the hamburger icon on top so you can close the menu */
   }
-  .hero iframe{
-    width:100%;
+
+  .hero iframe {
+    width: 100%;
   }
 
   .nav-links {
@@ -851,15 +1606,15 @@ footer p {
 
 
   .album-tile .genre {
-    justify-self:center;
+    justify-self: center;
   }
 
   .album-tile .date {
-    justify-self:center;
+    justify-self: center;
   }
 
-  .steam-card{
-    width:50%;
+  .steam-card {
+    width: 50%;
   }
 
   .album-details {
@@ -869,29 +1624,48 @@ footer p {
   }
 
   .album-details .social-icons {
-    margin-inline:auto;
+    margin-inline: auto;
   }
 
-  .hero-main{
+  .hero-main {
     background-color: var(--bg-dark);
-    width:100%;
+    width: 100%;
 
     border: 1px solid var(--bg-dark);
   }
 
-  .hero-traits{
-    display:none;
+  .hero-traits {
+    display: none;
   }
 
-  .hero-panel{
+  .hero-panel {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .hero-panel-text{
-    width:100%;
+  .hero-panel-text {
+    width: 100%;
   }
+
+  .paypal-method-item {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .paypal-method-info {
+    width: 100%
+  }
+
+  .paypal-method-info {
+    justify-self: left;
+  }
+
+  .quick-links-item {
+    padding: 6%;
+
+  }
+
 }
 
 /* Mobile Responsiveness */
