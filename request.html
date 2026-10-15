@@ -50,19 +50,19 @@
                 <div id="div-name">
                     <label class="required">
                         <span class="label">First Name</span>
-                        <input type="text" id="first-name" placeholder="John..." required>
+                        <input type="text" id="first-name" name="first-name" placeholder="John..." required>
                         <span class="error-message" id="first-name-error" aria-live="polite"></span>
                     </label>
                     <label class="required">
                         <span class="label">Last Name</span>
-                        <input type="text" id="last-name" placeholder="Schuster..." required>
+                        <input type="text" id="last-name" name="last-name" placeholder="Schuster..." required>
                         <span class="error-message" id="last-name-error" aria-live="polite"></span>
                     </label>
                 </div>
 
                 <label class="required">
                     <span class="label">Email</span>
-                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
                     <span class="error-message" id="email-error" aria-live="polite"></span>
                 </label>
 
@@ -70,18 +70,18 @@
                     <span class="label">Preferred Contact Method</span>
                     <span>Leave blank for email. If you want to communicate through social media please provide your
                         username</span>
-                    <input type="text" id="contact-method" placeholder="Instagram (@djkaladrius)">
+                    <input name="contact-method" type="text" id="contact-method" placeholder="Instagram (@djkaladrius)">
                 </label>
 
                 <label class="required">
                     <span class="label">Artist Name </span>
-                    <input id="artist-name" placeholder="John Summit..." required>
+                    <input name="artist-name" id="artist-name" placeholder="John Summit..." required>
                     <span class="error-message" id="artist-name-error" aria-live="polite"></span>
                 </label>
                 <label>
                     <span class="label">Artist Website</span>
                     <span>Where can I listen to your music? (Spotify preferred)</span>
-                    <input type="URL" id="website" placeholder="open.spotify/...">
+                    <input name="website" type="URL" id="website" placeholder="open.spotify/...">
                 </label>
 
             </fieldset>
@@ -92,7 +92,7 @@
                 <label for="contract" class="required">
                     <span class="label">Purchase Option</span>
                     <div class="custom-select-wrapper">
-                        <select id="contract" required>
+                        <select name="contract" id="contract" required>
                             <option value="" disabled selected>Select a Purchase Option</option>
                             <option value="basic">Basic</option>
                             <option value="trackout">Trackout</option>
@@ -109,20 +109,19 @@
                     <span class="label">Contract Alterations</span>
                     <span>List desired changes to the terms of the purchase option above (if any). I will contact you to
                         follow up on any changes so we can craft the contract you need.</span>
-                    <textarea id="contract-details"
-                        placeholder="I need an extra revision for my basic lease..."></textarea>
+                    <textarea name="contract=details" id="contract-details" placeholder="I need an extra revision for my basic lease..."></textarea>
                 </label>
 
                 <label for="deadline">
                     <span class="label">Deadline</span>
                     <span>I do <strong>not</strong> guarantee to meet any deadlines less than one month in advance, but
                         I do my best to accomodate for any scheduling requirements.</span>
-                    <input id="deadline" type="date">
+                    <input name="deadline" id="deadline" type="date">
                 </label>
 
                 <label for="deadline-binding">
                     <div class="checkbox-and-label">
-                        <input type="checkbox" id="deadline-binding">
+                        <input name="deadline-binding" type="checkbox" id="deadline-binding">
                         <span class="label">Deadling is binding</span>
                         <span>Check this if you will no longer be able/willing to pay for the beat past the selected
                             deadline</span>
@@ -187,7 +186,7 @@
                 <div id="other-genre-container" style="display: none; margin-top: 10px;">
                     <label for="other-genre">
                         <span class="label">Please specify:</span>
-                        <input type="text" id="other-genre" name="other_genre" />
+                        <input name="other-genre" type="text" id="other-genre" name="other_genre" />
                     </label>
                 </div>
 
@@ -195,12 +194,12 @@
                     <label for="bpm">
                         <span class="label">BPM Range</span>
 
-                        <input id="bpm" type="number" placeholder="90-100">
+                        <input name="bpm" id="bpm" type="number" placeholder="90-100">
                     </label>
                     <label for="key">
                         <span class="label">Key</span>
 
-                        <input id="key" type="text" placeholder="C#m">
+                        <input name="key" id="key" type="text" placeholder="C#m">
                     </label>
                 </div>
 
@@ -208,7 +207,7 @@
                     <span class="label">Inspirations</span>
 
                     <span>List any songs that you want to inspire the sound of this beat. Around three is ideal.</span>
-                    <textarea id="inspo" placeholder="e.g. 'producer, producer' by Keaton Auld" required></textarea>
+                    <textarea name="inspo" id="inspo" placeholder="e.g. 'producer, producer' by Keaton Auld" required></textarea>
 
                     <span class="error-message" id="inspiration-error" aria-live="polite"></span>
                 </label>
@@ -218,7 +217,7 @@
 
                     <span>This is your chance to list any instruments or other artistic choices you want incorporated
                         into your beat.</span>
-                    <textarea id="details" placeholder="I really want a punchy snare...a trumpet would be nice...etc."
+                    <textarea name="details" id="details" placeholder="I really want a punchy snare...a trumpet would be nice...etc."
                         required></textarea>
 
                     <span class="error-message" id="details-error" aria-live="polite"></span>
