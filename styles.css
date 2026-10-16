@@ -805,12 +805,16 @@ footer p {
 
 /* Cards Grid View */
 .beat-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items on incomplete rows */
+  gap: 1rem;
 }
 
 .beat-card {
+  flex: 1 1 300px;
+  max-width: 400px; /* Prevents cards from growing too wide */
+  height: 475px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -1514,6 +1518,120 @@ input[type="number"] {
 }
 
 
+.genre-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #fff;
+}
+
+.genre-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.genre-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items on incomplete rows */
+  gap: 1rem;
+}
+
+/* Give cards a flex basis so they keep their size */
+.genre-card {
+  flex: 1 1 200px;
+  max-width: 250px; /* Prevents cards from growing too wide */
+  height: 200px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--bg-darker);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.genre-card:hover {
+  border-color: var(--brand-red);
+  transform: translateY(-4px);
+}
+
+/* Front & Back Content Positioning */
+.card-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.front, .back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Front (Genre Title) */
+.front {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.genre-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+}
+
+/* Back (Artist List) */
+.back {
+  opacity: 0;
+  transform: translateY(12px);
+  background-color: var(--bg-darker);
+}
+
+.back-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--brand-red);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.artist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.artist-list li {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin: 0.25rem 0;
+}
+
+/* Hover State Animations */
+.genre-card:hover .front,
+.genre-card.is-active .front {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
+.genre-card:hover .back,
+.genre-card.is-active .back {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 @media (max-width: 768px) {
   .hamburger {
@@ -1521,6 +1639,13 @@ input[type="number"] {
     position: relative;
     z-index: 1010;
     /* Keeps the hamburger icon on top so you can close the menu */
+  }
+
+  .logo{
+    width: 10%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero iframe {

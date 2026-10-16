@@ -11,27 +11,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Scroll Animation Observer (Fade In)
+  // Detect if the mobile device uses a nested scroll container instead of the body
+  const scrollContainer = document.querySelector('.scroll-container') || null;
+
   const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
+    root: scrollContainer, // Defaults to full viewport if null
+    rootMargin: '0px 0px -10% 0px', // Triggers slightly before element enters view for smoother mobile scrolling
+    threshold: 0.05 // Lower threshold for tall mobile cards/sections
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); // Unobserve to free up mobile memory
       }
     });
   }, observerOptions);
 
+  // Observe elements once DOM is fully ready
   const animatedElements = document.querySelectorAll('.fade-in');
-  animatedElements.forEach(el => observer.observe(el));
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  if ('IntersectionObserver' in window) {
+    animatedElements.forEach(el => observer.observe(el));
+  } else {
+    // Fallback for very old mobile browsers: reveal elements immediately
+    animatedElements.forEach(el => el.classList.add('visible'));
+  }
+  animatedElements.forEach(el => observer.observe(el));
+
+  // Parse the URL query string
+  const params = new URLSearchParams(window.location.search);
+  const deptValue = params.get("contract");
+
+  // If a parameter exists, find the dropdown and set its value
+  if (deptValue) {
+    const dropdown = document.getElementById("contract");
+    dropdown.value = deptValue;
+  }
+
+
   const tabs = document.querySelectorAll('.tab-btn');
   const track = document.getElementById('track');
   const viewport = document.getElementById('viewport');
@@ -59,12 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.setAttribute('aria-selected', isActive);
     });
 
-    // Smoothly adjust viewport height to match active content length
+/*     // Smoothly adjust viewport height to match active content length
     const activePaneHeight = panes[index].getBoundingClientRect().height;
     viewport.style.height = `${activePaneHeight}px`;
 
     prevTranslate = -index * (viewport.offsetWidth);
-  }
+ */  }
 
   // Handle Tab Click
   tabs.forEach((tab, index) => {
@@ -132,6 +151,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial alignment load
   updateTab(0);
+
+  const genre_cards = document.querySelectorAll('.genre-card');
+
+  genre_cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Toggle active state for mobile tap support
+      const isActive = card.classList.contains('is-active');
+
+      // Close all other open cards on mobile
+      genre_cards.forEach(c => c.classList.remove('is-active'));
+
+      if (!isActive) {
+        card.classList.add('is-active');
+      }
+    });
+  });
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Target all cards on the page using a class name
@@ -228,7 +267,7 @@ function validateField(inputEl) {
   const parentLabel = inputEl.parentElement;
   const errorSpan = parentLabel.querySelector('.error-message');
   const fieldName = inputEl.getAttribute('data-name') || 'This field';
-  
+
   if (inputEl.validity.valid) {
     if (errorSpan) {
       errorSpan.textContent = '';
@@ -272,7 +311,7 @@ form.addEventListener('submit', function (e) {
   });
 
   if (isFormValid) {
-    window.location.href="success.html"
+    window.location.href = "success.html"
   } else {
     e.preventDefault();
     form.querySelector('.invalid')?.focus();
